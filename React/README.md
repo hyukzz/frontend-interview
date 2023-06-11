@@ -109,3 +109,18 @@
 ### 23. useCallback의 동작원리
 
 - useCallback은 변수가 선언되어지면 해당 함수가 실행되어진다. 그 후에 deps의 변경을 통해 값이 변경이 되면 새로운 함수를 return하고, 값이 변경이 되어지지 않는 다면 기존 함수를 return한다.
+
+### 24. useEffect 메소드로 componentWillUnmount 가 동작할 수 있는 방법에 대해서 설명하세요.
+
+- useEffect 코드 내부에서 return하는 익명함수를 작성하는 방법으로 componentwillUnmount를 구현할 수 있습니다.
+
+```
+useEffect(() => {
+    console.log('컴포넌트가 화면에 나타남');
+    return () => {
+      console.log('컴포넌트가 화면에서 사라짐');
+    };
+  }, []);
+```
+
+- componentwillUnmonunt는 컴포넌트가 화면에서 사라질 때 나타나는 라이플 사이클입니다.
