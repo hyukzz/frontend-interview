@@ -124,3 +124,7 @@ useEffect(() => {
 ```
 
 - componentwillUnmonunt는 컴포넌트가 화면에서 사라질 때 나타나는 라이플 사이클입니다.
+
+### 25. React Hooks의 장점은 무엇인가요?
+
+- Hooks의 장점은 로직의 재사용이 가능하고 관리가 쉽다는 것입니다. 함수 안에서 다른 함수를 호출하는 것으로 새로운 hook을 만들어 볼 수 있습니다. 기존의 class component는 여러 단계의 상속으로 인해 전반적으로 복잡성과 오류 가능성을 증가시켰습니다. 하지만 function component에 hooks에 도입되면서 class component가 가지고 있는 기능을 모두 사용할 수 있음은 물론이고 기존 class component 복잡성, 재사용성의 단점들까지 해결됩니다.
