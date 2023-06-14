@@ -128,3 +128,8 @@ useEffect(() => {
 ### 25. React Hooks의 장점은 무엇인가요?
 
 - Hooks의 장점은 로직의 재사용이 가능하고 관리가 쉽다는 것입니다. 함수 안에서 다른 함수를 호출하는 것으로 새로운 hook을 만들어 볼 수 있습니다. 기존의 class component는 여러 단계의 상속으로 인해 전반적으로 복잡성과 오류 가능성을 증가시켰습니다. 하지만 function component에 hooks에 도입되면서 class component가 가지고 있는 기능을 모두 사용할 수 있음은 물론이고 기존 class component 복잡성, 재사용성의 단점들까지 해결됩니다.
+
+### 26. React 내부 작동 원리를 재조정 (Reconciliation) 개념과 함께 설명하세요.
+
+- React에서 DOM을 어떻게 렌더링하고 브라우저 이벤트를 처리하나요?
+  실제로 DOM을 제어하지 않고 중간에 virtual DOM을 두어 virtual DOM이 변경될 때, 실제 DOM을 변경하도록 설계되어있습니다. 이 작업을 Reconciliation이라고 합니다. virtual DOM을 갱신하는 방법에는 setState()메소드를 호출하는 방법과 redux의 경우처럼 store가 변하면 다시 최상위 컴포넌트의 render()함수를 호출해서 갱신하는 2가지 방법이 있습니다.
