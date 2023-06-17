@@ -133,3 +133,19 @@ useEffect(() => {
 
 - React에서 DOM을 어떻게 렌더링하고 브라우저 이벤트를 처리하나요?
   실제로 DOM을 제어하지 않고 중간에 virtual DOM을 두어 virtual DOM이 변경될 때, 실제 DOM을 변경하도록 설계되어있습니다. 이 작업을 Reconciliation이라고 합니다. virtual DOM을 갱신하는 방법에는 setState()메소드를 호출하는 방법과 redux의 경우처럼 store가 변하면 다시 최상위 컴포넌트의 render()함수를 호출해서 갱신하는 2가지 방법이 있습니다.
+
+### 27. key는 어떻게 사용되나요?
+
+- React에서 collection을 렌더링할 때 요소와 데이터 사이의 관계를 추적하기 쉽도록 반복되는 각 요소에 key를 추가하는 것이 중요합니다. 키는 고유한 ID(이상적으로는 uuid 또는 기타의 고유한 문자열)을 사용해야 하지만, 마지막 수단으로 Array index를 사용할 수 도 있습니다.
+
+```
+<ul>
+  {todos.map((todo) =>
+    <li key={todo.id}>
+      {todo.text}
+    </li>
+  )};
+</ul>
+```
+
+- key를 사용하지 않으면 collection에 아이템을 추가하거나 제거할 때 예상하지 못한 동작 결과가 발생할 수 있습니다.
