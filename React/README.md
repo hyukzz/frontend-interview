@@ -153,3 +153,17 @@ useEffect(() => {
 ### 28. React Context는 무엇인가요?
 
 - React는 하나의 애플리케이션 안에서 다수개의 컴포넌트들이 상태를 공유할 때 발생하는 문제들에 대해 대응하기 위한 Context API를 제공합니다. Context가 도입되기 이전에는 Redux와 같은 별도의 상태 관리 라이브러리를 추가하는 것이 유일한 방법이었습니다. 하지만 개발자들은 소규모의 앱에서는 Redux가 불필요한 복잡성을 유발한다고 느꼈습니다.
+
+### 29. 생명주기 메소드는 무엇인가요?
+
+- 클래스 기반 컴포넌트들은 마운트되었을 때나 언마운트될 때와 같이 생명주기 중 특정 시점에 호출되는 특별한 메소드를 선언할 수 있습니다. 이는 컴포넌트가 필요할 때 세팅 및 해체, 타이머를 설정하거나 브라우저 이벤트에 바인딩할 시 유용합니다.
+
+아래의 생명주기 메소드들은 컴포넌트를 불러오기 위해 사용할 수 있습니다.
+
+- componentWillMount: 컴포넌트가 생성된 후 DOM에 렌더링되기전 호출됩니다.
+- componentDidMount: 첫 렌더링이 끝나고 컴포넌트의 DOM 엘리먼트가 사용가능할 시 호출됩니다.
+- componentWillReceiveProps: props가 업데이트 될 때 호출됩니다.
+- shouldComponentUpdate: 새로운 props를 받았을 때 호출되며, 성능 최적화를 위해 재렌더링을 막을 수 있습니다.
+- componentWillUpdate: 새로운 props를 받았고 shouldComponentUpdate가 true를 리턴할 때 호출됩니다.
+- componentDidUpdate: 컴포넌트가 업데이트된 후에 호출됩니다.
+- componentWillUnmount: 컴포넌트가 DOM에서 제거되기 전 호출되어 이벤트 리스너 등을 정리할 수 있게 해줍니다.
