@@ -167,3 +167,7 @@ useEffect(() => {
 - componentWillUpdate: 새로운 props를 받았고 shouldComponentUpdate가 true를 리턴할 때 호출됩니다.
 - componentDidUpdate: 컴포넌트가 업데이트된 후에 호출됩니다.
 - componentWillUnmount: 컴포넌트가 DOM에서 제거되기 전 호출되어 이벤트 리스너 등을 정리할 수 있게 해줍니다.
+
+### 30. Static Site Generator에 대해서 아시나요?
+
+- Static Site Generator(SSG)는 정적인 HTML, CSS, JavaScript 파일을 생성하는 소프트웨어입니다. SSG를 사용하면 동적인 서버 측 프로그래밍 없이 정적인 웹 페이지를 생성할 수 있습니다. 이에 대한 몇 가지 장점은 다음과 같습니다. 정적인 파일을 생성하기 때문에, 웹 서버의 보안에 대한 걱정이 줄어듭니다. 정적인 파일은 웹 브라우저에 의해 더 빠르게 다운로드됩니다. 따라서 로딩 속도가 향상되며 사용자 경험이 좋아집니다. GatsbyJS, Next.js, Hugo, Jekyll 등과 같은 플랫폼들이 있습니다.
