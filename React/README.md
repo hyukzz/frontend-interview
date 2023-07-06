@@ -215,3 +215,16 @@ useEffect(() => {
 ### 36. SEO란?
 
 - 검색 엔진 최적화(SEO)란, 웹 페이지 검색엔진이 자료를 수집하고 순위를 매기는 방식에 맞게 웹 페이지를 구성해서 검색 결과의 상위에 나올 수 있게 하는 작업을 말합니다. SPA를 개발하는 경우 여러 가지 이점이 있음에도 불구하고 SEO가 잘 되지 않는다는 단점이 있습니다. 따라서 정보 제공을 목적으로 하는 웹페이지는 SPA방식이 불리할 수 있으며, React 같은 것은 ssr을 통해 SEO에 대응할 수 있는 기술을 선별적으로 사용하면 됩니다.
+
+### 37. 생명주기 메소드
+
+- 컴포넌트가 브라우저 상에서 나타날 때, 업데이트 될 때, 사라지게 될 때 호출하는 메소드들이다.
+
+  컴포넌트 사이클은 크게 마운트 - 업데이트 - 언마운트 로 이뤄진다.
+
+  함수형 컴포넌트에서는 useEffect라는 훅을 이용해서 생명주기 메소드들을 대체한다.
+
+- useEffect(callBackFunc); //렌더링 될 때마다
+- useEffect(callBackFunc, []); // componentDidMount : 최초 렌더링시
+- useEffect(callBackFunc, [state1, state2]); // 최초 렌더링 + dependencies가 변경 되었을 때
+- useEffect(()=>{ return(() => func()) }); // componentWillUnmount
