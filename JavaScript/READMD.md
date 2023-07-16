@@ -79,3 +79,27 @@
   두 값이 같은지를 비교합니다.
 
   모든 NaN 값은 같다고 처리됩니다
+
+- Object.freeze() / Object.isFrozen()
+
+  객체를 프리징(freeze)합니다. 즉, 다른 곳의 코드에서 객체의 속성을 지우거나 바꿀 수 없습니다.
+
+  객체가 프리징 되었는지 확인합니다.
+
+​- Object.seal() / Object.isSealed()
+
+다른 코드가 객체의 속성을 삭제하지 못하도록 합니다.
+
+객체가 실링(seal) 되었는지 확인합니다.
+
+​- Object.getPrototypeOf()
+
+명시된 객체의 프로토타입을 반환.
+
+​- Object.setPrototypeOf()
+
+프로토타입(즉, 내부의 [[Prototype]] 속성)을 설정합니다.
+
+​- Instanceof
+
+해당 변수가 객체인지 비교하거나, 객체가 특정 생성자의 자식인지 조회할 수 있습니다.
